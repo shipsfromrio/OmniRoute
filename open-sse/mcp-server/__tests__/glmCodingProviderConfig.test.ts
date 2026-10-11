@@ -104,6 +104,7 @@ describe("GLM Coding provider registry surfaces", () => {
       "glm-4.7-flash",
       "glm-4.7",
       "glm-4.6v",
+      "glm-4.6v-flash",
       "glm-4.6",
       "glm-4.5v",
       "glm-4.5",
@@ -212,6 +213,13 @@ describe("GLM Coding provider registry surfaces", () => {
       cache_creation: 0.075,
     });
     expect(getPricingForModel("glm", "glm-4.7-flash")).toEqual({
+      input: 0,
+      output: 0,
+      cached: 0,
+      reasoning: 0,
+      cache_creation: 0,
+    });
+    expect(getPricingForModel("glm", "glm-4.6v-flash")).toEqual({
       input: 0,
       output: 0,
       cached: 0,
