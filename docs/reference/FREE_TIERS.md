@@ -217,7 +217,7 @@ Most "free tokens per month" figures in this space are sums of per-model labels.
 | `xkiro`          | recurring     | ~150M            | —                  | caution   | 39     |
 | `longcat`        | one-time      | —                | 10M                | caution   | 1      |
 | `cerebras`       | one-time      | —                | $5 credit          | caution   | 2      |
-| `cloudflare-ai`  | recurring     | ~30M             | —                  | caution   | 9      |
+| `cloudflare-ai`  | recurring     | ~30M             | —                  | caution   | 13     |
 | `groq`           | recurring     | ~30M             | —                  | caution   | 5      |
 | `api-airforce`   | recurring     | ~24M             | —                  | caution   | 7      |
 | `bluesminds`     | recurring     | ~7M              | —                  | ambiguous | 22     |
