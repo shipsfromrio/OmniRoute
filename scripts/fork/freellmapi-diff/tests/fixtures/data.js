@@ -1,0 +1,15 @@
+window.CATALOG_SNAPSHOT={version:"2099.01.01",generatedAt:"2099-01-01T00:00:00.000Z",tier:'monthly',counts:{platforms:4,models:9,},
+platforms:[{id:"google",name:"Google AI Studio"},{id:"alfa",name:"Alfa"},{id:"beta",name:"Beta Vivo"},{id:"sumido",name:"Sumido"}],
+models:[
+{platform:"google",modelId:"gemini-x-flash",displayName:"Gemini X Flash",intelligenceRank:10,limits:{rpm:10,rpd:20,tpm:25e4,tpd:null},monthlyTokenBudget:"~3M",contextWindow:1048576,enabled:true,quirks:[]},
+{platform:"google",modelId:"gemini-y-pro",displayName:"Gemini Y Pro",intelligenceRank:5,limits:{rpm:5,rpd:null,tpm:null,tpd:null},monthlyTokenBudget:"free · 5 RPM",contextWindow:1048576,enabled:true,quirks:[]},
+{platform:"alfa",modelId:"Alfa/Modelo-Um",displayName:'Alfa \'Um\'',intelligenceRank:30,limits:{rpm:30,rpd:null,tpm:null,tpd:null},monthlyTokenBudget:"~10-20M",contextWindow:131072,enabled:!0,quirks:[{slug:"alfa-treino",title:"Prompts may be used",body:"The free tier may use prompts for training.",severity:"warning"}]},
+{platform:"alfa",modelId:"alfa-dois",displayName:"Alfa Dois",intelligenceRank:40,limits:{rpm:null,rpd:null,tpm:null,tpd:null},monthlyTokenBudget:"~5M",contextWindow:32768,enabled:true,quirks:[]},
+{platform:"alfa",modelId:"alfa-tres",displayName:"Alfa Tres",intelligenceRank:50,limits:{rpm:null,rpd:null,tpm:null,tpd:null},monthlyTokenBudget:"~1,000K",contextWindow:65536,enabled:true,quirks:[]},
+{platform:"alfa",modelId:"alfa-novo",displayName:"Alfa Novo",intelligenceRank:20,limits:{rpm:null,rpd:null,tpm:null,tpd:null},monthlyTokenBudget:"~50-100M",contextWindow:65536,enabled:true,quirks:[]},
+{platform:"alfa",modelId:"alfa-desligado",displayName:"Alfa Desligado",intelligenceRank:1,limits:{rpm:null,rpd:null,tpm:null,tpd:null},monthlyTokenBudget:"~1B",contextWindow:1,enabled:false,quirks:[]},
+{platform:"alfa",modelId:"alfa-imagem",displayName:"Alfa Imagem",intelligenceRank:null,limits:{rpm:2,rpd:null,tpm:null,tpd:null},monthlyTokenBudget:"free · 2/min",contextWindow:null,enabled:true,quirks:[]},
+{platform:"beta",modelId:"beta-qualquer",displayName:"Beta Q",intelligenceRank:60,limits:{rpm:null,rpd:null,tpm:null,tpd:null},monthlyTokenBudget:"",contextWindow:null,enabled:true,quirks:[]},
+{platform:"sumido",modelId:"sumido-1",displayName:"Sumido 1",intelligenceRank:70,limits:{rpm:null,rpd:null,tpm:null,tpd:null},monthlyTokenBudget:"~2M",contextWindow:8192,enabled:true,quirks:[]},
+],
+embeddings:[]};
