@@ -259,6 +259,14 @@ export const GLM_PRICING = {
     reasoning: 0.9,
     cache_creation: 0.3,
   },
+  // Free on every line of https://docs.z.ai/guides/overview/pricing (2026-10-11).
+  "glm-4.6v-flash": {
+    input: 0,
+    output: 0,
+    cached: 0,
+    reasoning: 0,
+    cache_creation: 0,
+  },
   "glm-4.5v": {
     input: 0.6,
     output: 1.8,

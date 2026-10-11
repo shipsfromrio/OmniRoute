@@ -26,5 +26,15 @@ export const cloudflare_aiProvider: RegistryEntry = {
     },
     { id: "@cf/moonshotai/kimi-k2.6", name: "Kimi K2.6 (🆓)", contextLength: 262144 },
     { id: "@cf/google/gemma-4-26b-a4b-it", name: "Gemma 4 26B (🆓)", contextLength: 262144 },
+    // Context windows from each model's page under
+    // https://developers.cloudflare.com/workers-ai/models/ (read 2026-10-11).
+    { id: "@cf/openai/gpt-oss-120b", name: "GPT-OSS 120B (🆓)", contextLength: 128000 },
+    { id: "@cf/openai/gpt-oss-20b", name: "GPT-OSS 20B (🆓)", contextLength: 128000 },
+    {
+      id: "@cf/meta/llama-4-scout-17b-16e-instruct",
+      name: "Llama 4 Scout 17B (🆓)",
+      contextLength: 131000,
+    },
+    { id: "@cf/qwen/qwen3-30b-a3b-fp8", name: "Qwen3 30B A3B (🆓)", contextLength: 32768 },
   ],
 };

@@ -22,7 +22,7 @@ import type { FreeModelBudget } from "./freeModelCatalog.ts";
  * rewrites file timestamps on every deploy, which would report a months-old
  * catalog as "updated today". Bump this whenever the entries below change.
  */
-export const FREE_CATALOG_CURATED_AT = "2026-09-12";
+export const FREE_CATALOG_CURATED_AT = "2026-10-11";
 
 export const FREE_MODEL_BUDGETS: FreeModelBudget[] = [
   { provider: "agentrouter", modelId: "claude-opus-4-8", displayName: "Claude Opus 4.8", monthlyTokens: 0, creditTokens: 200000000, freeType: "one-time-initial", poolKey: "agentrouter", tos: "caution" },
@@ -128,6 +128,14 @@ export const FREE_MODEL_BUDGETS: FreeModelBudget[] = [
   { provider: "cloudflare-ai", modelId: "@cf/zai-org/glm-4.7-flash", displayName: "GLM 4.7 Flash (🆓)", monthlyTokens: 0, creditTokens: 0, freeType: "recurring-daily", poolKey: "cloudflare-ai", tos: "caution" },
   { provider: "cloudflare-ai", modelId: "@cf/moonshotai/kimi-k2.6", displayName: "Kimi K2.6 (🆓)", monthlyTokens: 0, creditTokens: 0, freeType: "recurring-daily", poolKey: "cloudflare-ai", tos: "caution" },
   { provider: "cloudflare-ai", modelId: "@cf/google/gemma-4-26b-a4b-it", displayName: "Gemma 4 26B (🆓)", monthlyTokens: 0, creditTokens: 0, freeType: "recurring-daily", poolKey: "cloudflare-ai", tos: "caution" },
+  // evidence: public-page https://developers.cloudflare.com/workers-ai/platform/pricing/ (10,000 Neurons/day
+  // free, shared by every model on the account, hence no per-model number) and
+  // https://developers.cloudflare.com/workers-ai/platform/data-usage/ (2026-10-11): "Cloudflare does not use your
+  // Customer Content to (1) train any AI models made available on Workers AI".
+  { provider: "cloudflare-ai", modelId: "@cf/openai/gpt-oss-120b", displayName: "GPT-OSS 120B (🆓)", monthlyTokens: 0, creditTokens: 0, freeType: "recurring-daily", poolKey: "cloudflare-ai", tos: "caution", trainsOnPrompts: false },
+  { provider: "cloudflare-ai", modelId: "@cf/openai/gpt-oss-20b", displayName: "GPT-OSS 20B (🆓)", monthlyTokens: 0, creditTokens: 0, freeType: "recurring-daily", poolKey: "cloudflare-ai", tos: "caution", trainsOnPrompts: false },
+  { provider: "cloudflare-ai", modelId: "@cf/meta/llama-4-scout-17b-16e-instruct", displayName: "Llama 4 Scout 17B (🆓)", monthlyTokens: 0, creditTokens: 0, freeType: "recurring-daily", poolKey: "cloudflare-ai", tos: "caution", trainsOnPrompts: false },
+  { provider: "cloudflare-ai", modelId: "@cf/qwen/qwen3-30b-a3b-fp8", displayName: "Qwen3 30B A3B (🆓)", monthlyTokens: 0, creditTokens: 0, freeType: "recurring-daily", poolKey: "cloudflare-ai", tos: "caution", trainsOnPrompts: false },
   { provider: "cohere", modelId: "command-a-reasoning-08-2025", displayName: "Command A Reasoning (Aug 2025)", monthlyTokens: 800000, creditTokens: 0, freeType: "recurring-monthly", poolKey: "cohere", tos: "caution" },
   { provider: "cohere", modelId: "command-a-vision-07-2025", displayName: "Command A Vision (Jul 2025)", monthlyTokens: 800000, creditTokens: 0, freeType: "recurring-monthly", poolKey: "cohere", tos: "caution" },
   { provider: "cohere", modelId: "command-a-03-2025", displayName: "Command A (Mar 2025)", monthlyTokens: 800000, creditTokens: 0, freeType: "recurring-monthly", poolKey: "cohere", tos: "caution" },
@@ -474,6 +482,9 @@ export const FREE_MODEL_BUDGETS: FreeModelBudget[] = [
   { provider: "agnes-cn", modelId: "agnes-3.0-flash", displayName: "Agnes 3.0 Flash", monthlyTokens: 0, creditTokens: 0, freeType: "recurring-uncapped", poolKey: "agnes-cn-free", tos: "ok" },
   { provider: "glm", modelId: "glm-4.7-flash", displayName: "GLM-4.7-Flash", monthlyTokens: 0, creditTokens: 0, freeType: "recurring-uncapped", poolKey: "zhipu-flash-free", tos: "ok" },
   { provider: "glm", modelId: "glm-4.5-flash", displayName: "GLM-4.5-Flash", monthlyTokens: 0, creditTokens: 0, freeType: "recurring-uncapped", poolKey: "zhipu-flash-free", tos: "ok" },
+  // evidence: public-page https://docs.z.ai/guides/overview/pricing (2026-10-11): GLM-4.6V-Flash is "Free" on
+  // input, cached input, cache storage and output; no published token cap, hence recurring-uncapped.
+  { provider: "glm", modelId: "glm-4.6v-flash", displayName: "GLM-4.6V-Flash", monthlyTokens: 0, creditTokens: 0, freeType: "recurring-uncapped", poolKey: "zhipu-flash-free", tos: "ok" },
   { provider: "navy", modelId: "shared-pool", displayName: "NavyAI free pool (150K tokens/day, shared)", monthlyTokens: 4500000, creditTokens: 0, freeType: "recurring-daily", poolKey: "navy-free", tos: "ok" },
   { provider: "aihorde", modelId: "aphrodite/TheDrummer/Cydonia-24B-v4.3", displayName: "Cydonia 24B (AI Horde)", monthlyTokens: 0, creditTokens: 0, freeType: "keyless", poolKey: "aihorde-anon", tos: "ok" },
   { provider: "aihorde", modelId: "aphrodite/TheDrummer/Skyfall-31B-v4.2", displayName: "Skyfall 31B (AI Horde)", monthlyTokens: 0, creditTokens: 0, freeType: "keyless", poolKey: "aihorde-anon", tos: "ok" },

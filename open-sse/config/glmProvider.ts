@@ -191,6 +191,18 @@ export const GLM_SHARED_MODELS = Object.freeze([
     supportsVision: true,
   },
   {
+    // Free tier ("Lightweight, Completely Free", 128K context):
+    // https://docs.z.ai/guides/vlm/glm-4.6v and https://docs.z.ai/guides/overview/pricing
+    id: "glm-4.6v-flash",
+    name: "GLM 4.6V Flash (Vision)",
+    contextLength: 128000,
+    maxOutputTokens: 32768,
+    toolCalling: true,
+    supportsReasoning: true,
+    supportedThinkingEfforts: [],
+    supportsVision: true,
+  },
+  {
     id: "glm-4.6",
     name: "GLM 4.6",
     contextLength: 200000,
