@@ -1,0 +1,4 @@
+{
+  "gemini-x-flash": { "rpm": 5, "rpd": 20, "tpm": 250000 },
+  "gemini-y-pro": { "rpm": 0, "rpd": 0, "tpm": 0 }
+}
