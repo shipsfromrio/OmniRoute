@@ -14,5 +14,7 @@ export const mistralProvider: RegistryEntry = {
     { id: "mistral-small-latest", name: "Mistral Small 4" },
     { id: "devstral-latest", name: "Devstral 2" },
     { id: "codestral-latest", name: "Codestral" },
+    { id: "ministral-14b-latest", name: "Ministral 3 14B" },
+    { id: "ministral-8b-latest", name: "Ministral 3 8B" },
   ],
 };
